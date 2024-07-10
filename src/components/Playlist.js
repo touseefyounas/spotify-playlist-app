@@ -11,10 +11,11 @@ function Playlist({spotify, token, selectedTracks, setSelectedTracks}) {
     }
     const addPlaylist = async (list) => {
         if (playlistName !== '' && list.length>0){
-            const user = spotify.userProfile(token);
+            const user = await spotify.userProfile(token);
+            console.log(user);
             const userId = user.id;
             console.log('user ID: ', userId); 
-            
+
             const uri = list.map(track=> track.uri);
             const result = await spotify.savePlaylist(playlistName, uri, token, userId);
             console.log('Save Playlist:', result);
