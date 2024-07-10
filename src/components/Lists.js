@@ -10,7 +10,7 @@ function Lists({tracks, spotify, selectedTracks, setSelectedTracks}) {
                 <Track tracks={tracks} spotify={spotify} selectedTracks={selectedTracks} setSelectedTracks={setSelectedTracks}/>
             </section>
             <section class='col-start-2 col-end-12 h-lvh overflow-y-auto md:col-end-12 md:col-start-8 bg-stone-950 opacity-35 hover:opacity-50 rounded-lg m-2'>
-                <Playlist tracks={selectedTracks} spotify={spotify} selectedTracks={selectedTracks} setSelectedTracks={setSelectedTracks}/>
+                <Playlist spotify={spotify} selectedTracks={selectedTracks} setSelectedTracks={setSelectedTracks}/>
             </section>
         </section>  
         </>
